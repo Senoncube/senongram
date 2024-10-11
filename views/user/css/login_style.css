@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+    font-family: "Raleway";
+}
+
+body {
+    margin: 0;
+    background-color: #2f3030;
+    color: white;
+}
+
+.login {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .h1 {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 49px;
+}
+
+.login main {
+    height: 80%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 25px;
+}
+
+.login .card {
+    box-shadow: 0 10px 30px rgb(255 255 255 / 0.2);
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 60%;
+    min-width: 700px;
+    height: 70%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login form section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.login form .big{
+    height: 80%;
+}
+
+.login input {
+    font-size: 30px;
+    border-radius: 100px;
+    padding: 5px 15px;
+    width: 100%;
+    outline: none;
+    border: none;
+    z-index: 1;
+}
+
+.login h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.login .link {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.login img {
+    position: relative;
+    height: 100%;
+    bottom: 0;
+}
+
+.login .second-part {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 0 20px 20px 0;
+}
+
+.login input {
+    background-size: 35px 35px;
+    padding-left: 50px !important;
+}
+
+.user {
+    background: white url("https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png") no-repeat scroll 8px 5px;
+}
+
+.password {
+    background: white url("https://icons-for-free.com/iconfiles/png/512/password+secure+security+unlock+icon-1320184637730856485.png") no-repeat scroll 8px 5px;
+}
+
+.password2 {
+    background: white url("https://icon-library.com/images/show-password-icon/show-password-icon-5.jpg") no-repeat scroll 8px 5px;
+}
+
+.cool-input {
+    width: 75%;
+    position: relative;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    padding: 3px;
+    display: inline-block;
+    border-radius: 100px;
+}
+
+.focus-gradient {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+.cool-input span {
+
+    transform: scale(.993, .94);
+    transition: transform .5s, opacity .5s;
+    opacity: 0;
+
+    position:absolute;
+    z-index: 0;
+    margin:4px;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 3px #fff,
+    0 0 0 4px #fff,
+    5px -5px 40px #1beabd,
+    -5px 5px 40px #10abff;
+
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #1beabd, #10abff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cta {
+    cursor: pointer;
+    display: flex;
+    padding: 10px 45px;
+    text-decoration: none;
+    border: none;
+    font-size: 40px;
+    color: white;
+    background: #10abff;
+    transition: 1s;
+    box-shadow: 6px 6px 0 white;
+    transform: skewX(-15deg);
+}
+
+.cta:focus {
+    outline: none;
+}
+
+.cta.good:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+    background-color: #1beabd;
+}
+
+.cta.bad:hover {
+    transition: 0.5s;
+    background: orangered;
+}
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta.good:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+.cta span {
+    font-family: "Poppins", sans-serif !important;
+    transform: skewX(15deg)
+}
+
+.cta span:nth-child(2) {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+}
+
+/**************SVG****************/
+
+.cta path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+.cta path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.cta.good:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.cta.good:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.cta.good:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #FBC638;
+    }
+    100% {
+        fill: white;
+    }
+}
+
+.link {
+    position: relative;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #1beabd, #10abff);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.link:hover::before {
+    transform: scaleX(1);
+}
+
+
+.login {
+    z-index: 10;
+    position: absolute;
+}
+
+
+
+.card {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wrong-input {
+    background: linear-gradient(21deg, #db5918, #a30505) !important;
+}
+
+.wrong-input span {
+    box-shadow: inset 0 0 0 3px #fff,
+    0 0 0 4px #fff,
+    5px -5px 40px #db5918,
+    -5px 5px 40px #a30505;
+}
+
+.inp-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hint {
+    font-size: 20px;
+    height: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+/*.hint.remove {*/
+/*    animation: hint-remove 0.5s linear forwards;*/
+/*}*/
+
+/*.hint.add {*/
+/*    animation: hint-remove 0.5s linear backwards reverse;*/
+/*}*/
+
+/*@keyframes hint-remove {*/
+/*    0%{*/
+/*        opacity: 1;*/
+/*        height: 20px;*/
+/*    }*/
+/*    50% {*/
+/*        opacity: 0;*/
+/*        height: 20px;*/
+/*    }*/
+/*    100% {*/
+/*        height: 0;*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
+
+.shake {
+    position: relative;
+    animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) forwards;
+}
+
+@keyframes shake {
+    10%, 90% {
+        left: -1px;
+    }
+    20%, 80% {
+        left: 2px;
+    }
+    30%, 50%, 70% {
+        left: -3px;
+    }
+    40%, 60% {
+        left: 4px;
+    }
+}

@@ -1,0 +1,272 @@
+.main {
+    width: 50%;
+    min-width: 700px;
+}
+
+main {
+    min-width: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    width: 50%;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+.form__field::placeholder {
+    color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+    box-shadow: none;
+}
+
+.toggle[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.toggle + label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 200px;
+    height: 100px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.toggle + label:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.toggle:checked + label {
+    background: #bada55;
+}
+
+.toggle:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.toggle:active:after {
+    width: 130px;
+}
+
+.inputs {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.switch {
+    transform: scale(0.3);
+    width: 100px;
+    height: 50px;
+}
+
+.only-fans {
+    display: flex;
+    align-items: end;
+    font-size: 20px;
+    column-gap: 15px;
+}
+
+.friend {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    margin: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 10px;
+    column-gap: 20px;
+    align-items: end;
+    min-height: 120px;
+}
+
+.ava {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ava img {
+    width: 100%;
+    border-radius: 999px;
+}
+
+.info2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.info2 h2 {
+    margin: 0;
+    font-size: 35px;
+    text-align: center;
+}
+
+.info2 .stats {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.info2 .stats strong {
+    margin-right: 10px;
+}
+.cool-btn {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: all 0.5s;
+}
+
+.cool-btn div {
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0 30px;
+    transform: rotate(-30deg) skew(25deg);
+    transition: all 0.5s;
+}
+
+.cool-btn div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: teal;
+    transition: 0.5s;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px !important;
+}
+.arrow i {
+    transition: all 0.5s;
+    transform: rotate(45deg);
+}
+
+.cool-btn div span:nth-child(5) {
+    transform: translate(40px, -40px);
+    opacity: 1;
+}
+
+.cool-btn div span:nth-child(4) {
+    transform: translate(30px, -30px);
+    opacity: 0.8;
+}
+
+.cool-btn div span:nth-child(3) {
+    transform: translate(20px, -20px);
+    opacity: 0.6;
+}
+
+.cool-btn div span:nth-child(2) {
+    transform: translate(10px, -10px);
+    opacity: 0.4;
+}
+
+.cool-btn div span:nth-child(1) {
+    transform: translate(0, 0);
+    opacity: 0.2;
+}
+
+.cool-btn:hover div span {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.cool-btn:hover {
+
+    transform: translate(0, -20px);
+}
+
+.cool-btn:hover div {
+
+    transform: rotate(0deg) skew(0deg);
+}
+
+
+.cool-btn:hover div .arrow i {
+
+    transform: rotate(0deg);
+}
+
+.searchButton {
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

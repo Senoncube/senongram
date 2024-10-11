@@ -1,0 +1,164 @@
+.posts > button {
+    font-size: 30px;
+
+}
+
+.posts {
+    width: 70%;
+    position: relative;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.post {
+    width: 100%;
+}
+
+.post-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.post-main {
+    width: 70%;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px 10px 5px;
+    font-size: 30px;
+}
+
+.post-author {
+    width: 10%;
+}
+
+.post-author img {
+    width: 100%;
+    border-radius: 999px;
+}
+
+.post-time {
+    font-size: 15px;
+    color: lightgray;
+    float: right;
+}
+
+
+.like {
+    font-family: "Roboto";
+    border: none;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    min-width: 90px;
+    padding: 0 1rem 0 1rem;
+    transition: 150ms all;
+    background-color: #1e2837;
+}
+.like.dislike .icon svg.prime {
+    -webkit-animation: dislike 550ms forwards ease-in-out;
+    animation: dislike 550ms forwards ease-in-out;
+}
+.like.active {
+    background-color: #00FFF1;
+}
+.like.active .counter {
+    color: #0c1016;
+}
+.like.active .icon svg {
+    color: #0c1016;
+}
+.like.active .icon svg.prime {
+    -webkit-animation: like 550ms forwards ease-in-out;
+    animation: like 550ms forwards ease-in-out;
+}
+.like .counter {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    padding: 1rem 0 1rem 1rem;
+    transition: 150ms all;
+}
+.like .icon {
+    padding: .5rem;
+    transition: 150ms all;
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.like .icon svg {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.like .icon svg.normal {
+    z-index: 1;
+    opacity: 0.5;
+}
+.like .icon svg.prime {
+    z-index: 2;
+}
+
+@-webkit-keyframes dislike {
+    0% {
+        color: #0c1016;
+        transform: translate(0, 0%);
+    }
+    100% {
+        color: #00FFF1;
+        transform: translate(0, 300%) scale(0);
+    }
+}
+
+@keyframes dislike {
+    0% {
+        color: #0c1016;
+        transform: translate(0, 0%);
+    }
+    100% {
+        color: #00FFF1;
+        transform: translate(0, 300%) scale(0);
+    }
+}
+@-webkit-keyframes like {
+    0% {
+        color: white;
+        transform: translate(0, 0%);
+    }
+    100% {
+        color: #00FFF1;
+        transform: translate(0, -300%) scale(0);
+    }
+}
+@keyframes like {
+    0% {
+        color: white;
+        transform: translate(0, 0%);
+    }
+    100% {
+        color: #00FFF1;
+        transform: translate(0, -300%) scale(0);
+    }
+}
+
+.line {
+    width: 90%;
+    margin: 30px auto;
+    height: 3px;
+    background-color: white;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
